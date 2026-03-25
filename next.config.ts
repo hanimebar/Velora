@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // next-pwa is loaded conditionally to avoid dev issues
   experimental: {
     serverActions: {
       bodySizeLimit: '10mb',

@@ -33,6 +33,11 @@ export default function BookLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       {children}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `if('serviceWorker' in navigator){navigator.serviceWorker.register('/sw.js')}`,
+        }}
+      />
     </>
   )
 }
