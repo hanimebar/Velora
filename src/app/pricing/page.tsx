@@ -7,13 +7,12 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Pricing',
-  description: 'Simple, transparent pricing for independent yoga and Pilates studios.',
+  description: 'Simple, transparent pricing for independent wellness studios and instructors.',
 }
 
 const PLANS = [
   {
     name: 'Starter',
-    price_sek: 79,
     price_eur: 7.9,
     period: 'month',
     description: 'For studios just getting started.',
@@ -31,7 +30,6 @@ const PLANS = [
   },
   {
     name: 'Studio',
-    price_sek: 349,
     price_eur: 34.9,
     period: 'month',
     description: 'For established studios ready to grow.',
@@ -50,7 +48,6 @@ const PLANS = [
   },
   {
     name: 'Pro',
-    price_sek: 749,
     price_eur: 74.9,
     period: 'month',
     description: 'For multi-location studios. (Launching 2026)',
@@ -107,13 +104,10 @@ export default function PricingPage() {
                   <p className="text-sm mb-4" style={{ color: 'var(--color-foreground-muted)' }}>{plan.description}</p>
                   <div className="flex items-baseline gap-1">
                     <span className="text-3xl font-bold" style={{ color: 'var(--color-foreground)' }}>
-                      {plan.price_sek} kr
+                      €{plan.price_eur}
                     </span>
                     <span className="text-sm" style={{ color: 'var(--color-foreground-subtle)' }}>/ month</span>
                   </div>
-                  <p className="text-xs mt-0.5" style={{ color: 'var(--color-foreground-subtle)' }}>
-                    or approx. €{plan.price_eur} / month
-                  </p>
                 </div>
 
                 <ul className="space-y-2.5 flex-1 mb-6">

@@ -20,11 +20,11 @@ const TIMEZONES = [
 ]
 
 const CURRENCIES = [
+  { value: 'EUR', label: 'EUR — Euro' },
+  { value: 'GBP', label: 'GBP — British Pound' },
   { value: 'SEK', label: 'SEK — Swedish Krona' },
   { value: 'NOK', label: 'NOK — Norwegian Krone' },
   { value: 'DKK', label: 'DKK — Danish Krone' },
-  { value: 'EUR', label: 'EUR — Euro' },
-  { value: 'GBP', label: 'GBP — British Pound' },
 ]
 
 function slugify(text: string): string {
@@ -44,7 +44,7 @@ export default function OnboardingPage() {
     name: '',
     slug: '',
     timezone: 'Europe/Stockholm',
-    currency: 'SEK',
+    currency: 'EUR',
     description: '',
     contact_email: '',
   })

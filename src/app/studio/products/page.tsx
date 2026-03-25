@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = { title: 'Products' }
 
 function formatCurrency(amount: number, currency: string) {
-  return new Intl.NumberFormat('sv-SE', { style: 'currency', currency }).format(amount / 100)
+  return new Intl.NumberFormat('en-GB', { style: 'currency', currency }).format(amount / 100)
 }
 
 export default async function ProductsPage() {

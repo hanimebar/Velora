@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 56" fill="none">
+  <!-- Center petal — tallest, fully opaque -->
+  <path d="M 24 42 C 17 32, 17 16, 24 5 C 31 16, 31 32, 24 42 Z" fill="#698C60"/>
+  <!-- Left petal — sweeps upper-left -->
+  <path d="M 24 42 C 17 36, 5 26, 6 13 C 13 13, 18 26, 24 42 Z" fill="#698C60" opacity="0.82"/>
+  <!-- Right petal — sweeps upper-right -->
+  <path d="M 24 42 C 31 36, 43 26, 42 13 C 35 13, 30 26, 24 42 Z" fill="#698C60" opacity="0.82"/>
+  <!-- Small accent dot at base — terracotta -->
+  <circle cx="24" cy="44" r="2" fill="#C17F60" opacity="0.7"/>
+</svg>

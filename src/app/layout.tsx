@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     template: '%s | Velora',
   },
   description:
-    'Scheduling, memberships, and payments for independent yoga and Pilates studios. Nordic-first. The studio software Mindbody wishes it was.',
+    'Scheduling, memberships, and payments for independent wellness studios — yoga, Pilates, meditation, fitness, breathwork, doula services, and more. Up and running in an afternoon.',
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://velora.actvli.com'),
   openGraph: {
     title: 'Velora — Studio Scheduling & Membership Software',
     description:
-      'Scheduling, memberships, and payments for independent yoga and Pilates studios. Nordic-first.',
+      'Scheduling, memberships, and payments for independent wellness instructors. Half the cost, all the features.',
     url: 'https://velora.actvli.com',
     siteName: 'Velora',
     locale: 'en_GB',

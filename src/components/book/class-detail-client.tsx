@@ -20,7 +20,7 @@ interface ClassDetailClientProps {
 type ProductType = 'membership' | 'pack'
 
 function formatCurrency(amount: number, currency: string) {
-  return new Intl.NumberFormat('sv-SE', { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount / 100)
+  return new Intl.NumberFormat('en-GB', { style: 'currency', currency, maximumFractionDigits: 0 }).format(amount / 100)
 }
 
 export function ClassDetailClient({
