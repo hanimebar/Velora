@@ -1,26 +1,148 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Velora design tokens — warm boutique wellness palette */
+
+  /* Backgrounds */
+  --color-background: #F8F6F2;
+  --color-surface: #F0EDE7;
+  --color-surface-raised: #FFFFFF;
+
+  /* Foregrounds */
+  --color-foreground: #2D2620;
+  --color-foreground-muted: #6B5F57;
+  --color-foreground-subtle: #9A8F89;
+
+  /* Accent — dusty sage green */
+  --color-accent: #698C60;
+  --color-accent-light: #EBF0E8;
+  --color-accent-foreground: #FFFFFF;
+
+  /* Borders */
+  --color-border: #DDD8D2;
+  --color-border-strong: #C4BDB6;
+
+  /* Semantic */
+  --color-success: #3D7A52;
+  --color-success-light: #E8F4EE;
+  --color-warning: #C47D15;
+  --color-warning-light: #FBF0DC;
+  --color-danger: #B84040;
+  --color-danger-light: #FAEAEA;
+
+  /* Typography */
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Radius */
+  --radius: 4px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-light);
+    color: var(--color-foreground);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: var(--radius);
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  h1, h2, h3 {
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  h4, h5, h6 {
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+  }
+
+  input, textarea, select {
+    font-family: var(--font-sans);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .transition-velora {
+    transition: color 120ms ease-out, background-color 120ms ease-out, border-color 120ms ease-out, opacity 120ms ease-out;
+  }
+
+  .velora-card {
+    background-color: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: calc(var(--radius) * 2);
+    padding: 1.5rem;
+  }
+
+  .field-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--color-foreground-muted);
+  }
+
+  .badge {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    display: inline-block;
+    line-height: 1.4;
+  }
+
+  .badge-active {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+  }
+
+  .badge-paused {
+    background-color: var(--color-warning-light);
+    color: var(--color-warning);
+  }
+
+  .badge-cancelled {
+    background-color: var(--color-danger-light);
+    color: var(--color-danger);
+  }
+
+  .badge-neutral {
+    background-color: var(--color-surface);
+    color: var(--color-foreground-muted);
+  }
 }
