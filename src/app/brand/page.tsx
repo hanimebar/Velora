@@ -244,7 +244,7 @@ export default function BrandPage() {
               { do: 'Half the price of Mindbody. All the features you actually use.', dont: 'Disrupting the studio management space with cutting-edge tech.' },
               { do: 'Your clients book in seconds. No app download.', dont: 'Frictionless, omnichannel client engagement solution.' },
             ].map((ex, i) => (
-              <div key={i} className="grid grid-cols-2 divide-x border-t" style={{ borderColor: '#E5E0D8', divideColor: '#E5E0D8' }}>
+              <div key={i} className="grid grid-cols-2 divide-x border-t" style={{ borderColor: '#E5E0D8' }}>
                 <div className="p-4">
                   <p className="text-xs font-semibold mb-1.5" style={{ color: '#698C60' }}>Do</p>
                   <p className="text-sm" style={{ color: '#2D2620' }}>{ex.do}</p>
